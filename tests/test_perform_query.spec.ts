@@ -10,7 +10,10 @@ import { expect, test } from '@playwright/test';
             if (consentButton) {
                 await consentButton.click();
             }
-    
+
+            // Ensure the page is loaded and the search input is visible
+            
+          
             // Perform a search for top 5 soccer teams
             await page.fill('input[name="q"]', 'top 5 soccer teams');
             await page.keyboard.press('Enter');
